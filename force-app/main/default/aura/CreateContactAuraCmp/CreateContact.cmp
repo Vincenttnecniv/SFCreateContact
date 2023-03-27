@@ -1,0 +1,21 @@
+<aura:component controller="CreateContactController">
+  <aura:attribute name="contactFirstName" type="String" default="" />
+  <aura:attribute name="contactLastName" type="String" default="" />
+  <div
+    style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 10%"
+  >
+    <lightning:input
+      label="contactFirstName"
+      value="{!v.contactFirstName}"
+      onchange="{!c.handleContactFirstNameChange}"
+      class="slds-input"
+    />
+    <lightning:input
+      label="contactLastName"
+      value="{!v.contactLastName}"
+      onchange="{!c.handleContactLastNameChange}"
+      class="slds-input"
+    />
+      <lightning:button label="Create Account" onclick="{!c.createContactJS}"/>
+  </div>
+</aura:component>
